@@ -93,6 +93,7 @@ namespace AutoFlight{
 		this->map_.reset(new mapManager::occMap (this->nh_));
 
 		// initialize rrt planner
+		// 这里的 3 表示三维空间
 		this->rrtPlanner_.reset(new globalPlanner::rrtOccMap<3> (this->nh_));
 		this->rrtPlanner_->setMap(this->map_);
 
